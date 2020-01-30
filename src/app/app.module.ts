@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { TrainsComponent } from './trains/trains.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TrainsreturnComponent } from './trainsreturn/trainsreturn.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialdesignModule } from './materialdesign/materialdesign.module';
 
@@ -13,7 +14,8 @@ import { MaterialdesignModule } from './materialdesign/materialdesign.module';
   declarations: [
     AppComponent,
     MenuComponent,
-    TrainsComponent
+    TrainsComponent,
+    TrainsreturnComponent
   ],
   imports: [
     BrowserModule,

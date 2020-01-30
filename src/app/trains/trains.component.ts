@@ -8,20 +8,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TrainsComponent implements OnInit {
   timetableTpeTl: any[];
-  timetableTlTpe: any[];
 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
     const urlTpeTL = 'https://rata.digitraffic.fi/api/v1/live-trains/station/TPE/TL';
-    const urlTlTpe = 'https://rata.digitraffic.fi/api/v1/live-trains/station/TL/TPE';
     this.http.get(urlTpeTL).subscribe((data: any) => {
       console.log(data);
       this.timetableTpeTl = data;
-    });
-    this.http.get(urlTlTpe).subscribe((data: any) => {
-      console.log(data);
-      this.timetableTlTpe = data;
     });
   }
 }
