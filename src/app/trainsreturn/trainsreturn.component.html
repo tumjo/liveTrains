@@ -16,10 +16,10 @@
             <ng-container *ngIf="train.trainCategory == 'Commuter' || train.trainCategory == 'Long-distance'">
                 <td>{{train.trainType}} {{train.trainNumber}}</td>
                 <ng-container *ngFor="let traintime of train.timeTableRows">
-                    <ng-container *ngIf="traintime.stationShortCode == 'TPE' && traintime.type == 'DEPARTURE'">
+                    <ng-container *ngIf="traintime.stationShortCode == 'TL' && traintime.type == 'DEPARTURE'">
                         <td>{{traintime.scheduledTime | date:'HH:mm'}}</td>
                     </ng-container>
-                    <ng-container *ngIf="traintime.stationShortCode == 'TL' && traintime.type == 'ARRIVAL'">
+                    <ng-container *ngIf="traintime.stationShortCode == 'TPE' && traintime.type == 'ARRIVAL'">
                         <td>{{traintime.scheduledTime | date:'HH:mm'}}</td>
                     </ng-container>
                 </ng-container>
