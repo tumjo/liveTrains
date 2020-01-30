@@ -1,9 +1,9 @@
 # LiveTrainsApp
 
-The app uses API data to show next departures
+The app uses API data to show next departures.
 
-Tampere → Toijala
-Toijala → Tampere
+- Tampere → Toijala
+- Toijala → Tampere
 
 API: digitraffic.fi
 
