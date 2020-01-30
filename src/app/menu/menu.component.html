@@ -1,1 +1,10 @@
-<p>menu works!</p>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <div>{{title | titlecase}}</div>
+    <div>
+      <a mat-button [routerLink]="'/trains'"> Tampere-Toijala </a>
+      <a mat-button [routerLink]="'/TEMP'"> Toijala-Tampere </a>
+    </div>
+</mat-toolbar-row>
+</mat-toolbar>
+<app-trains></app-trains>
