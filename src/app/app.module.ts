@@ -7,6 +7,8 @@ import { MenuComponent } from './menu/menu.component';
 import { TrainsComponent } from './trains/trains.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TrainsreturnComponent } from './trainsreturn/trainsreturn.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialdesignModule } from './materialdesign/materialdesign.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { TrainsreturnComponent } from './trainsreturn/trainsreturn.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialdesignModule
   ],
   providers: [],
   bootstrap: [AppComponent]
