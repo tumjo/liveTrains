@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { TrainsComponent } from './trains/trains.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TrainsreturnComponent } from './trainsreturn/trainsreturn.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    TrainsComponent
+    TrainsComponent,
+    TrainsreturnComponent
   ],
   imports: [
     BrowserModule,

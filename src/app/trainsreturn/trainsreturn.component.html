@@ -1,0 +1,25 @@
+<h2>Toijala-Tampere junayhteydet</h2>
+<table>
+  <thead>
+    <tr>
+        <th>Junatyyppi</th>
+        <th>Lähtöaika</th>
+        <th>Tuloaika</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let train of timetableTlTpe">
+        <ng-container *ngIf="train.trainCategory == 'Commuter' || train.trainCategory == 'Long-distance'">
+            <td>{{train.trainType}} {{train.trainNumber}}</td>
+            <ng-container *ngFor="let traintime of train.timeTableRows">
+                <ng-container *ngIf="traintime.stationShortCode == 'TPE' && traintime.type == 'DEPARTURE'">
+                    <td>{{traintime.scheduledTime | date:'HH:mm'}}</td>
+                </ng-container>
+                <ng-container *ngIf="traintime.stationShortCode == 'TL' && traintime.type == 'ARRIVAL'">
+                    <td>{{traintime.scheduledTime | date:'HH:mm'}}</td>
+                </ng-container>
+            </ng-container>
+        </ng-container>
+    </tr>
+  </tbody>
+</table>
