@@ -12,7 +12,7 @@ export class TrainsComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    const urlTpeTL = 'https://rata.digitraffic.fi/api/v1/live-trains/station/TPE/TL';
+    const urlTpeTL = 'https://rata.digitraffic.fi/api/v1/live-trains/station/TPE/TL?limit=25';
     this.http.get(urlTpeTL).subscribe((data: any) => {
       console.log(data);
       this.timetableTpeTl = data;
